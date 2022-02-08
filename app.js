@@ -10,6 +10,8 @@ import epkg from "express-openid-connect";
 const { requiresAuth } = epkg;
 
 const app = express();
+
+app.use(express.static("./"));
 const indexPage = fs.readFileSync(`./public/index.html`, "utf-8");
 
 const PORT = process.env.PORT || 1818;
